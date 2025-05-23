@@ -7,8 +7,17 @@ import os
 root = tk.Tk()
 root.title("Untitled - Notepad")
 root.geometry("800x600")
-root.iconbitmap(r"main-logo.ico")
 root.configure(background="#f7ffff")
+
+# Safely set the window icon
+icon_path = os.path.join(os.path.dirname(__file__), "primary-logo.ico")
+try:
+    if os.path.exists(icon_path):
+        root.iconbitmap(icon_path)
+    else:
+        print("Icon file not found. Skipping icon load.")
+except Exception as e:
+    print(f"Failed to load icon: {e}")
 
 file = None  # Track opened file
 
@@ -109,4 +118,5 @@ root.bind("<Control-x>", lambda event: cut_func())
 root.bind("<Control-c>", lambda event: copy_func())
 root.bind("<Control-v>", lambda event: paste_func())
 
+# Run the App
 root.mainloop()

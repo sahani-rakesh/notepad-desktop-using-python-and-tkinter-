@@ -34,10 +34,5 @@ A simple Notepad application built using Python and Tkinter.
 ```
 
 ## Author
-**Developed by:** Rakesh Sahani
-
-## License
-```md
-This project is open-source and free to use.
-```
+**Developed by:** [Rakesh Sahani](https://www.linkedin.com/in/rakeshsahanii)
 
